@@ -18,7 +18,6 @@ git status
 - コミットメッセージ確認(長い分は「q」を押すと終了する)
 - リモートリポジトリに変更を反映
 ```
-git commit -m "コミットメッセージ"
 git log
 git push origin
 ```
