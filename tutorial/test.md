@@ -46,3 +46,21 @@ end
 ```
 rails test:integration
 ```
+>modelを作成するとtest/models/にtestファイルが作成される
+有効なuserかチェックする
+test/models/user_test.rb
+```
+require 'test_helper'
+class UserTest < ActiveSupport::TestCase
+  def setup         #testが実行される直前に実行される
+    @user = User.new(name: "Example User", email: "user@example.com")
+  end
+  test "should be valid" do     #テスト名
+    assert @user.valid?         #@userが有効かどうか
+  end
+end
+```
+modelに関するテスト実行
+```
+rails test:models
+```
